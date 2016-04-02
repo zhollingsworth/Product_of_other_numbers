@@ -22,7 +22,7 @@ public class Product_of_Array_Numbers
 		{
 			for(int j = 0; j < take.length; j++)
 			{
-				mult = (j != i) ? (mult*take[j]):mult;
+				mult = ((j != i) && (take[j] != 0)) ? (mult*take[j]):mult;
 						
 			}
 			giveBack[i] = mult;
@@ -33,7 +33,7 @@ public class Product_of_Array_Numbers
 	
 	public static void main(String[] args)
 	{
-		int[] give = new int[]{1, 7, 3, 7};
+		int[] give = new int[]{1, 7, 3, 0};
 		
 		int[] receive = getProductOfAllIntsExceptAtIndex(give);
 		for(int k = 0; k < receive.length; k++)
